@@ -33,6 +33,13 @@ function useLocale() {
 
 const UI_TRANSLATIONS: Record<string, string> = {
   "设计师平台": "Designer Platform",
+  "一体化内容设计平台": "Integrated Content Design Platform",
+  "需求分配、设计排期、资源流转与交付状态统一管理，让全球素材协作更清晰。": "Manage request assignment, designer scheduling, asset workflow, and delivery status in one place.",
+  "欢迎登录": "Welcome",
+  "智能运营": "Smart Ops",
+  "数据总览": "Data Overview",
+  "排期管理": "Scheduling",
+  "任务监控": "Task Monitor",
   "登录账号": "Login",
   "邮箱": "Email",
   "密码": "Password",
@@ -367,6 +374,7 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [error, setError] = useState("");
+  const { language, setLanguage, text } = useLocale();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -384,16 +392,31 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
       <div className="absolute -left-24 top-20 w-96 h-96 rounded-full bg-blue-300/25 blur-3xl" />
       <div className="absolute right-4 bottom-0 w-[520px] h-[520px] rounded-full bg-sky-300/20 blur-3xl" />
       <div className="absolute inset-0 opacity-50 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.45)_50%,transparent_100%)]" />
+      <div className="absolute right-6 top-5 z-20 flex items-center gap-1 rounded-xl border border-white/70 bg-white/50 p-1 shadow-sm backdrop-blur-xl">
+        {[
+          { value: "zh" as Language, label: "中文" },
+          { value: "en" as Language, label: "English" },
+        ].map(option => (
+          <button
+            key={option.value}
+            onClick={() => setLanguage(option.value)}
+            className={`rounded-lg px-3 py-1.5 text-[11px] font-semibold transition-colors ${
+              language === option.value ? "bg-primary text-primary-foreground shadow-sm" : "text-slate-500 hover:bg-white/70 hover:text-slate-800"
+            }`}>
+            {option.label}
+          </button>
+        ))}
+      </div>
 
       <div className="relative z-10 w-full max-w-6xl grid grid-cols-[1.25fr_380px] gap-14 items-center">
         <section className="relative min-h-[520px] flex flex-col justify-center">
           <div className="mb-10">
             <div className="inline-flex items-center rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 px-3 py-1 text-[11px] font-semibold text-white shadow-lg shadow-blue-500/20">
-              一体化内容设计平台
+              {text("一体化内容设计平台", "Integrated Content Design Platform")}
             </div>
             <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-900">Kika Global Studio</h1>
             <p className="mt-3 text-sm text-slate-600 max-w-xl leading-relaxed">
-              需求分配、设计排期、资源流转与交付状态统一管理，让全球素材协作更清晰。
+              {text("需求分配、设计排期、资源流转与交付状态统一管理，让全球素材协作更清晰。", "Manage request assignment, designer scheduling, asset workflow, and delivery status in one place.")}
             </p>
           </div>
 
@@ -406,10 +429,10 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
               className="absolute left-32 top-0 w-[340px] h-auto drop-shadow-[0_34px_58px_rgba(59,130,246,0.25)]" />
 
             {[
-              { label: "智能运营", icon: <Users size={15} />, className: "left-2 top-[96px] text-indigo-600" },
-              { label: "数据总览", icon: <LayoutGrid size={15} />, className: "left-[398px] top-[74px] text-emerald-600" },
-              { label: "排期管理", icon: <Calendar size={15} />, className: "left-10 top-[238px] text-blue-600" },
-              { label: "任务监控", icon: <Clock size={15} />, className: "left-[386px] top-[236px] text-amber-600" },
+              { label: text("智能运营", "Smart Ops"), icon: <Users size={15} />, className: "left-2 top-[96px] text-indigo-600" },
+              { label: text("数据总览", "Data Overview"), icon: <LayoutGrid size={15} />, className: "left-[398px] top-[74px] text-emerald-600" },
+              { label: text("排期管理", "Scheduling"), icon: <Calendar size={15} />, className: "left-10 top-[238px] text-blue-600" },
+              { label: text("任务监控", "Task Monitor"), icon: <Clock size={15} />, className: "left-[386px] top-[236px] text-amber-600" },
             ].map(item => (
               <div key={item.label} className={`absolute ${item.className} flex items-center gap-2 rounded-2xl bg-white/45 px-4 py-2 text-xs font-semibold shadow-[0_14px_36px_rgba(30,64,175,0.12)] backdrop-blur-xl border border-white/70 ring-1 ring-white/40`}>
                 <span className="w-7 h-7 rounded-full bg-white/60 flex items-center justify-center shadow-inner">{item.icon}</span>
@@ -421,20 +444,20 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
 
         <section className="rounded-3xl border border-white/70 bg-white/72 backdrop-blur-xl shadow-[0_24px_80px_rgba(30,64,175,0.18)] p-7">
           <div className="text-center mb-6">
-            <h2 className="text-lg font-bold text-slate-900">欢迎登录</h2>
+            <h2 className="text-lg font-bold text-slate-900">{text("欢迎登录", "Welcome")}</h2>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="text-xs font-semibold text-slate-500 block mb-1.5">邮箱</label>
+              <label className="text-xs font-semibold text-slate-500 block mb-1.5">{text("邮箱", "Email")}</label>
               <input value={email} onChange={e => { setEmail(e.target.value); setError(""); }}
                 type="email" placeholder="your@company.com" autoComplete="email"
                 className="w-full px-3 py-3 bg-white/85 border border-blue-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-400 shadow-inner shadow-blue-50" />
             </div>
             <div>
-              <label className="text-xs font-semibold text-slate-500 block mb-1.5">密码</label>
+              <label className="text-xs font-semibold text-slate-500 block mb-1.5">{text("密码", "Password")}</label>
               <div className="relative">
                 <input value={password} onChange={e => { setPassword(e.target.value); setError(""); }}
-                  type={showPw ? "text" : "password"} placeholder="请输入密码" autoComplete="current-password"
+                  type={showPw ? "text" : "password"} placeholder={text("请输入密码", "Enter password")} autoComplete="current-password"
                   className="w-full px-3 py-3 bg-white/85 border border-blue-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-400 pr-10 shadow-inner shadow-blue-50" />
                 <button type="button" onClick={() => setShowPw(v => !v)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 transition-colors">
@@ -445,11 +468,11 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
             {error && <p className="text-xs text-red-500">{error}</p>}
             <button type="submit"
               className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl text-sm font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all shadow-lg shadow-blue-500/25 mt-2">
-              登录
+              {text("登录", "Log In")}
             </button>
           </form>
           <div className="mt-5 pt-4 border-t border-blue-100">
-            <div className="text-[11px] text-slate-500 mb-2">测试账号（密码均为 123456）</div>
+            <div className="text-[11px] text-slate-500 mb-2">{text("测试账号（密码均为 123456）", "Test accounts (password: 123456)")}</div>
             <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto pr-1 [&::-webkit-scrollbar]:hidden">
               {ACCOUNTS.map(a => (
                 <button key={a.id} onClick={() => { setEmail(a.email); setPassword(a.password); setError(""); }}
@@ -462,7 +485,7 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
           </div>
         </section>
       </div>
-      <div className="absolute right-6 bottom-5 text-[11px] font-medium text-slate-500/80">设计师平台 V0.2</div>
+      <div className="absolute right-6 bottom-5 text-[11px] font-medium text-slate-500/80">{text("设计师平台", "Designer Platform")} V0.2</div>
     </div>
   );
 }
