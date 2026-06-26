@@ -1,11 +1,12 @@
 import { createContext, useContext, useState, useRef, useCallback, useEffect } from "react";
+import { createPortal } from "react-dom";
 import {
   LayoutGrid, Clock, CheckCircle2, AlertCircle, Users, Plus, Filter,
   ChevronDown, MoreHorizontal, Search, Calendar, Tag, X, Upload,
   Image as ImageIcon, ArrowRight, Bell, Settings, ChevronRight,
   Edit2, Trash2, RotateCcw, UserCheck, ZoomIn, ChevronLeft,
   AlertTriangle, Circle, Download, Grip, Info, LogOut, Lock, Eye, EyeOff,
-  Languages, Palette, Monitor, Sparkles, Keyboard
+  Languages, Palette, Monitor, Sparkles, Keyboard, Mail
 } from "lucide-react";
 
 // ─── Toast system ─────────────────────────────────────────────────────────────
@@ -36,6 +37,15 @@ const UI_TRANSLATIONS: Record<string, string> = {
   "一体化内容设计平台": "Integrated Content Design Platform",
   "需求分配、设计排期、资源流转与交付状态统一管理，让全球素材协作更清晰。": "Manage request assignment, designer scheduling, asset workflow, and delivery status in one place.",
   "欢迎登录": "Welcome",
+  "快捷登录": "Quick Login",
+  "普通登录": "Standard Login",
+  "邮箱登录": "Email Login",
+  "邮箱快捷登录": "Email Quick Login",
+  "Google 登录": "Continue with Google",
+  "使用邮箱免密进入测试环境": "Use email to enter the test workspace",
+  "使用 Google 账号进入": "Use a Google account",
+  "请输入邮箱": "Enter email",
+  "未找到该邮箱账号": "No account found for this email",
   "智能运营": "Smart Ops",
   "数据总览": "Data Overview",
   "排期管理": "Scheduling",
@@ -60,6 +70,8 @@ const UI_TRANSLATIONS: Record<string, string> = {
   "退出登录": "Log Out",
   "系统语言": "System Language",
   "暂无预览图": "No preview",
+  "预览图": "Preview Images",
+  "查看全部预览图": "View All Preview Images",
   "需关注": "Attention",
   "已同步": "Synced",
   "未分配": "Unassigned",
@@ -374,17 +386,32 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [error, setError] = useState("");
+  const [loginMode, setLoginMode] = useState<"quick" | "normal">("quick");
   const { language, setLanguage, text } = useLocale();
+
+  function loginAs(account: LoggedInUser & { password: string }) {
+    const { password: _, ...user } = account;
+    onLogin(user);
+  }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const account = ACCOUNTS.find(a => a.email === email && a.password === password);
     if (account) {
-      const { password: _, ...user } = account;
-      onLogin(user);
+      loginAs(account);
     } else {
       setError("邮箱或密码错误，请重试");
     }
+  }
+
+  function handleQuickEmailLogin() {
+    const account = ACCOUNTS.find(a => a.email === "admin@company.com") ?? ACCOUNTS[0];
+    loginAs(account);
+  }
+
+  function handleGoogleLogin() {
+    const account = ACCOUNTS.find(a => a.email === "admin@company.com") ?? ACCOUNTS[0];
+    loginAs(account);
   }
 
   return (
@@ -446,43 +473,88 @@ function LoginPage({ onLogin }: { onLogin: (u: LoggedInUser) => void }) {
           <div className="text-center mb-6">
             <h2 className="text-lg font-bold text-slate-900">{text("欢迎登录", "Welcome")}</h2>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="text-xs font-semibold text-slate-500 block mb-1.5">{text("邮箱", "Email")}</label>
-              <input value={email} onChange={e => { setEmail(e.target.value); setError(""); }}
-                type="email" placeholder="your@company.com" autoComplete="email"
-                className="w-full px-3 py-3 bg-white/85 border border-blue-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-400 shadow-inner shadow-blue-50" />
+          <div className="mb-5 grid grid-cols-2 rounded-2xl bg-blue-50/80 p-1 border border-blue-100">
+            {[
+              { value: "quick" as const, label: text("快捷登录", "Quick Login") },
+              { value: "normal" as const, label: text("普通登录", "Standard Login") },
+            ].map(option => (
+              <button
+                key={option.value}
+                type="button"
+                onClick={() => { setLoginMode(option.value); setError(""); }}
+                className={`h-10 rounded-xl text-xs font-semibold transition-all ${
+                  loginMode === option.value
+                    ? "bg-white text-blue-700 shadow-sm"
+                    : "text-slate-500 hover:text-slate-800"
+                }`}>
+                {option.label}
+              </button>
+            ))}
+          </div>
+
+          {loginMode === "quick" ? (
+            <div className="space-y-3">
+              <button
+                type="button"
+                onClick={handleQuickEmailLogin}
+                className="w-full h-12 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-blue-500/25 hover:from-blue-600 hover:to-indigo-700 transition-all flex items-center justify-center gap-2">
+                <Mail size={16} />
+                {text("邮箱登录", "Email Login")}
+              </button>
+              <button
+                type="button"
+                onClick={handleGoogleLogin}
+                className="w-full h-12 rounded-2xl border border-blue-100 bg-white/80 text-sm font-semibold text-slate-700 shadow-sm hover:bg-white hover:border-blue-200 transition-all flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.84z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06L5.84 9.9C6.71 7.3 9.14 5.38 12 5.38z" />
+                </svg>
+                {text("Google 登录", "Continue with Google")}
+              </button>
             </div>
-            <div>
-              <label className="text-xs font-semibold text-slate-500 block mb-1.5">{text("密码", "Password")}</label>
-              <div className="relative">
-                <input value={password} onChange={e => { setPassword(e.target.value); setError(""); }}
-                  type={showPw ? "text" : "password"} placeholder={text("请输入密码", "Enter password")} autoComplete="current-password"
-                  className="w-full px-3 py-3 bg-white/85 border border-blue-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-400 pr-10 shadow-inner shadow-blue-50" />
-                <button type="button" onClick={() => setShowPw(v => !v)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 transition-colors">
-                  {showPw ? <EyeOff size={14} /> : <Eye size={14} />}
-                </button>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="text-xs font-semibold text-slate-500 block mb-1.5">{text("邮箱", "Email")}</label>
+                <input value={email} onChange={e => { setEmail(e.target.value); setError(""); }}
+                  type="email" placeholder="your@company.com" autoComplete="email"
+                  className="w-full px-3 py-3 bg-white/85 border border-blue-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-400 shadow-inner shadow-blue-50" />
+              </div>
+              <div>
+                <label className="text-xs font-semibold text-slate-500 block mb-1.5">{text("密码", "Password")}</label>
+                <div className="relative">
+                  <input value={password} onChange={e => { setPassword(e.target.value); setError(""); }}
+                    type={showPw ? "text" : "password"} placeholder={text("请输入密码", "Enter password")} autoComplete="current-password"
+                    className="w-full px-3 py-3 bg-white/85 border border-blue-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-400/30 focus:border-blue-400 pr-10 shadow-inner shadow-blue-50" />
+                  <button type="button" onClick={() => setShowPw(v => !v)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 transition-colors">
+                    {showPw ? <EyeOff size={14} /> : <Eye size={14} />}
+                  </button>
+                </div>
+              </div>
+              {error && <p className="text-xs text-red-500">{text(error, error === "邮箱或密码错误，请重试" ? "Email or password is incorrect. Please try again." : error)}</p>}
+              <button type="submit"
+                className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl text-sm font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all shadow-lg shadow-blue-500/25 mt-2">
+                {text("登录", "Log In")}
+              </button>
+            </form>
+          )}
+          {loginMode === "normal" && (
+            <div className="mt-5 pt-4 border-t border-blue-100">
+              <div className="text-[11px] text-slate-500 mb-2">{text("测试账号（密码均为 123456）", "Test accounts (password: 123456)")}</div>
+              <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto pr-1 [&::-webkit-scrollbar]:hidden">
+                {ACCOUNTS.map(a => (
+                  <button key={a.id} onClick={() => { setEmail(a.email); setPassword(a.password); setError(""); }}
+                    className="text-left px-2.5 py-2 rounded-xl bg-blue-50/70 hover:bg-blue-100/80 transition-colors border border-blue-100/60">
+                    <div className="text-[11px] font-semibold text-slate-700">{a.name}</div>
+                    <div className={`text-[10px] ${roleTextClass(a.role)}`}>{a.role}</div>
+                  </button>
+                ))}
               </div>
             </div>
-            {error && <p className="text-xs text-red-500">{error}</p>}
-            <button type="submit"
-              className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl text-sm font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all shadow-lg shadow-blue-500/25 mt-2">
-              {text("登录", "Log In")}
-            </button>
-          </form>
-          <div className="mt-5 pt-4 border-t border-blue-100">
-            <div className="text-[11px] text-slate-500 mb-2">{text("测试账号（密码均为 123456）", "Test accounts (password: 123456)")}</div>
-            <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto pr-1 [&::-webkit-scrollbar]:hidden">
-              {ACCOUNTS.map(a => (
-                <button key={a.id} onClick={() => { setEmail(a.email); setPassword(a.password); setError(""); }}
-                  className="text-left px-2.5 py-2 rounded-xl bg-blue-50/70 hover:bg-blue-100/80 transition-colors border border-blue-100/60">
-                  <div className="text-[11px] font-semibold text-slate-700">{a.name}</div>
-                  <div className={`text-[10px] ${roleTextClass(a.role)}`}>{a.role}</div>
-                </button>
-              ))}
-            </div>
-          </div>
+          )}
         </section>
       </div>
       <div className="absolute right-6 bottom-5 text-[11px] font-medium text-slate-500/80">{text("设计师平台", "Designer Platform")} V0.2</div>
@@ -999,6 +1071,127 @@ function ResourceTypeBadge({ type }: { type: ResourceType }) {
   );
 }
 
+function previewImageUrl(seed: string, width = 720, height = 1280) {
+  return `https://picsum.photos/seed/${seed}/${width}/${height}`;
+}
+
+function fullPreviewImageUrl(seed: string) {
+  return `https://picsum.photos/seed/${seed}/1400/1000`;
+}
+
+function ImagePreviewModal({
+  images,
+  title,
+  initialIndex,
+  onClose,
+}: {
+  images: string[];
+  title: string;
+  initialIndex: number;
+  onClose: () => void;
+}) {
+  const [active, setActive] = useState(initialIndex);
+  const safeActive = Math.min(active, images.length - 1);
+
+  if (!images.length) return null;
+
+  const modal = (
+    <div
+      className="fixed inset-0 z-[120] bg-slate-950/72 backdrop-blur-sm flex items-center justify-center p-8"
+      onClick={e => {
+        e.stopPropagation();
+        onClose();
+      }}>
+      <div className="w-full max-w-5xl h-[82vh] rounded-3xl bg-card border border-white/15 shadow-2xl overflow-hidden flex" onClick={e => e.stopPropagation()}>
+        <div className="w-24 flex-none bg-slate-950/90 p-3 overflow-y-auto [&::-webkit-scrollbar]:hidden">
+          <div className="space-y-2">
+            {images.map((imgId, idx) => (
+              <button
+                key={`${imgId}-${idx}`}
+                type="button"
+                onClick={() => setActive(idx)}
+                className={`relative w-full aspect-[9/16] rounded-xl overflow-hidden border transition-all ${
+                  safeActive === idx ? "border-blue-400 ring-2 ring-blue-400/40" : "border-white/15 opacity-70 hover:opacity-100"
+                }`}>
+                <img src={previewImageUrl(imgId, 180, 320)} alt="" className="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="min-w-0 flex-1 flex flex-col bg-slate-950">
+          <div className="h-14 flex items-center justify-between px-5 border-b border-white/10 text-white">
+            <div className="min-w-0">
+              <div className="text-sm font-semibold truncate">{title}</div>
+              <div className="text-[11px] text-white/55">{safeActive + 1} / {images.length}</div>
+            </div>
+            <button type="button" onClick={onClose} className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/16 flex items-center justify-center transition-colors">
+              <X size={16} />
+            </button>
+          </div>
+          <div className="min-h-0 flex-1 flex items-center justify-center p-6">
+            <img
+              src={fullPreviewImageUrl(images[safeActive])}
+              alt={title}
+              className="max-h-full max-w-full rounded-2xl object-contain shadow-2xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  return createPortal(modal, document.body);
+}
+
+function CardPreviewStack({
+  images,
+  title,
+  className = "",
+}: {
+  images: string[];
+  title: string;
+  className?: string;
+}) {
+  const [modalIndex, setModalIndex] = useState<number | null>(null);
+  const cover = images[0];
+  const extraCount = Math.max(0, images.length - 1);
+
+  if (!images.length) {
+    return (
+      <div className={`aspect-[9/16] rounded-xl bg-muted border border-border flex flex-col items-center justify-center gap-1.5 ${className}`}>
+        <ImageIcon size={16} className="text-muted-foreground/30" />
+        <span className="text-[10px] text-muted-foreground/35">暂无预览图</span>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={e => {
+          e.stopPropagation();
+          setModalIndex(0);
+        }}
+        className={`relative aspect-[9/16] rounded-xl overflow-hidden bg-gray-100 border border-border shadow-sm group ${className}`}>
+        <img src={previewImageUrl(cover, 180, 320)} alt={title} className="w-full h-full object-cover object-center transition-transform group-hover:scale-105" />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+        {extraCount > 0 && (
+          <div className="absolute left-1.5 bottom-1.5 rounded-full bg-slate-950/72 px-1.5 py-0.5 text-[10px] font-bold text-white shadow-sm">
+            +{extraCount}
+          </div>
+        )}
+      </button>
+      {modalIndex !== null && (
+        <ImagePreviewModal
+          images={images}
+          title={title}
+          initialIndex={modalIndex}
+          onClose={() => setModalIndex(null)} />
+      )}
+    </>
+  );
+}
+
 function SelectField<T extends string>({
   value,
   placeholder,
@@ -1104,9 +1297,7 @@ function Sidebar({
     <aside className="w-[88px] flex-none bg-card border-r border-border flex flex-col h-screen sticky top-0 z-[1000]">
       {/* Logo */}
       <div className="flex flex-col items-center py-5 border-b border-border gap-1">
-        <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-sm">
-          <LayoutGrid size={18} className="text-white" />
-        </div>
+        <img src="/assets/kika-logo.png" alt="Kika" className="w-10 h-10 object-contain" />
         <span className="text-[10px] font-semibold text-foreground leading-tight text-center">Kika Global Studio</span>
         <span className="w-16 text-center text-[9px] text-muted-foreground leading-tight">{text("设计师平台", "Designer Platform")} V0.2</span>
       </div>
@@ -1257,36 +1448,7 @@ function KanbanCard({ topic, onSelect }: { topic: Topic; onSelect: (t: Topic) =>
           ? "shadow-[0_2px_8px_rgba(240,64,64,0.12)] ring-1 ring-red-200"
           : "shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
       }`}>
-      {/* Preview images */}
-      {topic.images.length > 0 ? (
-        <div className="flex gap-0.5 h-20 bg-muted overflow-hidden">
-          {topic.images.slice(0, 3).map((imgId, i) => (
-            <div
-              key={i}
-              className={`flex-1 overflow-hidden bg-gray-100 ${
-                topic.images.length === 1 ? "rounded-none" : ""
-              }`}>
-              <img
-                src={`https://picsum.photos/seed/${imgId}/200/160`}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-          {topic.images.length > 3 && (
-            <div className="w-8 flex-none bg-black/40 flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold">+{topic.images.length - 3}</span>
-            </div>
-          )}
-        </div>
-      ) : (
-        <div className="h-10 bg-muted flex items-center justify-center gap-1.5">
-          <ImageIcon size={12} className="text-muted-foreground/30" />
-          <span className="text-[10px] text-muted-foreground/30">暂无预览图</span>
-        </div>
-      )}
-
-      <div className="p-3.5 pl-4">
+      <div className="p-3.5">
         {/* Status chip + urgency */}
         <div className="flex items-center justify-between mb-2">
           <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${statusConfig[topic.status].bg} ${statusConfig[topic.status].color}`}>
@@ -1302,41 +1464,46 @@ function KanbanCard({ topic, onSelect }: { topic: Topic; onSelect: (t: Topic) =>
           </div>
         </div>
 
-        {/* Title */}
-        <p className="text-[13px] font-semibold text-foreground leading-snug mb-1.5 line-clamp-2">
-          {topic.name}
-        </p>
+        <div className="grid grid-cols-[96px_minmax(0,1fr)] gap-3">
+          <CardPreviewStack images={topic.images} title={topic.name} className="w-full" />
+          <div className="min-w-0">
+            {/* Title */}
+            <p className="text-[13px] font-semibold text-foreground leading-snug mb-1.5 line-clamp-2">
+              {topic.name}
+            </p>
 
-        {/* Description */}
-        <p className="text-[11px] text-muted-foreground leading-relaxed line-clamp-2 mb-2.5">
-          {topic.description}
-        </p>
+            {/* Description */}
+            <p className="text-[11px] text-muted-foreground leading-relaxed line-clamp-2 mb-2.5">
+              {topic.description}
+            </p>
 
-        {/* Chips row */}
-        <div className="flex flex-wrap gap-1 mb-3">
-          <ResourceTypeBadge type={topic.resourceType} />
-          {appChips.map((chip, i) => (
-            <span key={i} className="text-[10px] px-1.5 py-0.5 rounded bg-muted text-muted-foreground font-medium">
-              {chip}
-            </span>
-          ))}
-          {isTimeout && (
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-500 font-semibold flex items-center gap-0.5">
-              <AlertTriangle size={9} /> 超时
-            </span>
-          )}
-        </div>
+            {/* Chips row */}
+            <div className="flex flex-wrap gap-1 mb-2.5">
+              <ResourceTypeBadge type={topic.resourceType} />
+              {appChips.map((chip, i) => (
+                <span key={i} className="text-[10px] px-1.5 py-0.5 rounded bg-muted text-muted-foreground font-medium">
+                  {chip}
+                </span>
+              ))}
+              {isTimeout && (
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-500 font-semibold flex items-center gap-0.5">
+                  <AlertTriangle size={9} /> 超时
+                </span>
+              )}
+            </div>
 
-        {/* Operator row */}
-        <div className="flex items-center gap-1.5 mb-3">
-          <div className="w-4 h-4 rounded-full bg-orange-100 flex items-center justify-center flex-none">
-            <Users size={9} className="text-orange-500" />
+            {/* Operator row */}
+            <div className="flex items-center gap-1.5 mb-2.5">
+              <div className="w-4 h-4 rounded-full bg-orange-100 flex items-center justify-center flex-none">
+                <Users size={9} className="text-orange-500" />
+              </div>
+              <span className="text-[11px] text-muted-foreground truncate">{topic.operator}</span>
+            </div>
           </div>
-          <span className="text-[11px] text-muted-foreground">{topic.operator}</span>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border mb-2.5" />
+        <div className="border-t border-border mt-3 mb-2.5" />
 
         {/* Bottom row: designer | date */}
         <div className="flex items-center justify-between">
@@ -2902,23 +3069,12 @@ function TaskCard({ task }: { task: Topic }) {
   const [showSnapshot, setShowSnapshot] = useState(false);
 
   return (
-    <div className={`relative bg-card rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition-shadow min-w-0 max-w-[420px] ${
+    <div className={`relative bg-card rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition-shadow min-w-0 max-w-[460px] ${
       isTimeout ? "border-red-300 ring-1 ring-red-200" : "border-border"
     }`}>
       {isTimeout && (
         <div className="absolute top-0 left-0 right-0 bg-red-500 text-white text-[10px] font-bold text-center py-0.5 tracking-wider uppercase">
           ⚠ Timeout
-        </div>
-      )}
-
-      {/* Image */}
-      {task.images.length > 0 && (
-        <div className={`relative h-28 bg-gray-100 ${isTimeout ? "mt-5" : ""}`}>
-          <img
-            src={`https://picsum.photos/seed/${task.images[0]}/400/224`}
-            alt={task.name}
-            className="w-full h-full object-cover" />
-          <div className={`absolute inset-0 ${isTimeout ? "bg-red-900/20" : "bg-black/5"}`} />
         </div>
       )}
 
@@ -2928,34 +3084,41 @@ function TaskCard({ task }: { task: Topic }) {
           <ResourceTypeBadge type={task.resourceType} />
           <StatusBadge status={task.status} />
         </div>
-        <div className="mb-2 inline-flex max-w-full items-center gap-1.5 rounded-full bg-blue-50 border border-blue-100 px-2 py-0.5 text-[10px] font-semibold text-blue-700">
-          <Clock size={10} /> {task.productionStage ?? defaultProductionStageForTopic(task)}
-        </div>
 
-        {/* Name */}
-        <div className="font-semibold text-sm text-foreground mb-1 leading-snug">{task.name}</div>
-        <div className="text-xs text-muted-foreground mb-3 line-clamp-2">{task.description}</div>
+        <div className="grid grid-cols-[104px_minmax(0,1fr)] gap-3">
+          <CardPreviewStack images={task.images} title={task.name} className="w-full" />
 
-        {/* Meta */}
-        <div className={`space-y-1.5 text-[11px] p-2.5 rounded-lg ${isTimeout ? "bg-red-50" : "bg-background"}`}>
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">任务时间</span>
-            <span className={`font-mono font-medium ${isTimeout ? "text-red-600" : "text-foreground"}`}>
-              {task.startDate} – {task.endDate}
-            </span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">跟进运营</span>
-            <span className="text-foreground font-medium">{task.operator}</span>
-          </div>
-          {task.daysLeft !== null && (
-            <div className="flex items-center justify-between">
-              <span className="text-muted-foreground">{task.daysLeft < 0 ? "已逾期" : "剩余时间"}</span>
-              <span className={`font-mono font-semibold ${task.daysLeft < 0 ? "text-red-600" : task.daysLeft <= 3 ? "text-amber-600" : "text-emerald-600"}`}>
-                {task.daysLeft < 0 ? `-${Math.abs(task.daysLeft)}d` : `+${task.daysLeft}d`}
-              </span>
+          <div className="min-w-0">
+            <div className="mb-2 inline-flex max-w-full items-center gap-1.5 rounded-full bg-blue-50 border border-blue-100 px-2 py-0.5 text-[10px] font-semibold text-blue-700">
+              <Clock size={10} /> <span className="truncate">{task.productionStage ?? defaultProductionStageForTopic(task)}</span>
             </div>
-          )}
+
+            {/* Name */}
+            <div className="font-semibold text-sm text-foreground mb-1 leading-snug line-clamp-2">{task.name}</div>
+            <div className="text-xs text-muted-foreground mb-3 line-clamp-2">{task.description}</div>
+
+            {/* Meta */}
+            <div className={`space-y-1.5 text-[11px] p-2.5 rounded-lg ${isTimeout ? "bg-red-50" : "bg-background"}`}>
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-muted-foreground flex-none">任务时间</span>
+                <span className={`font-mono font-medium truncate ${isTimeout ? "text-red-600" : "text-foreground"}`}>
+                  {task.startDate} – {task.endDate}
+                </span>
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-muted-foreground flex-none">跟进运营</span>
+                <span className="text-foreground font-medium truncate">{task.operator}</span>
+              </div>
+              {task.daysLeft !== null && (
+                <div className="flex items-center justify-between">
+                  <span className="text-muted-foreground">{task.daysLeft < 0 ? "已逾期" : "剩余时间"}</span>
+                  <span className={`font-mono font-semibold ${task.daysLeft < 0 ? "text-red-600" : task.daysLeft <= 3 ? "text-amber-600" : "text-emerald-600"}`}>
+                    {task.daysLeft < 0 ? `-${Math.abs(task.daysLeft)}d` : `+${task.daysLeft}d`}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Footer */}

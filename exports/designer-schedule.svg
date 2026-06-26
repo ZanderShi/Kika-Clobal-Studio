@@ -1,0 +1,479 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="1414" viewBox="0 0 3200 1414">
+<rect width="3200" height="1414" fill="#f8fafc"/>
+<text x="24" y="36" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">设计师排期</text>
+<text x="24" y="60" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">当前任务时间范围 · 2026-06-04 到 2026-07-31</text>
+<rect x="24" y="78" width="126" height="38" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+<text x="36" y="102" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#475569" opacity="0.82">任务</text>
+<text x="136" y="103" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="end" fill="#475569">34</text>
+<rect x="166" y="78" width="126" height="38" rx="8" fill="#eff6ff" stroke="#e2e8f0"/>
+<text x="178" y="102" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8" opacity="0.82">设计师</text>
+<text x="278" y="103" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="end" fill="#1d4ed8">16</text>
+<rect x="308" y="78" width="126" height="38" rx="8" fill="#f5f3ff" stroke="#e2e8f0"/>
+<text x="320" y="102" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#6d28d9" opacity="0.82">平均占用</text>
+<text x="420" y="103" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="end" fill="#6d28d9">16天</text>
+<rect x="450" y="78" width="126" height="38" rx="8" fill="#fef2f2" stroke="#e2e8f0"/>
+<text x="462" y="102" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#dc2626" opacity="0.82">超时</text>
+<text x="562" y="103" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="end" fill="#dc2626">4</text>
+<rect x="592" y="78" width="126" height="38" rx="8" fill="#fffbeb" stroke="#e2e8f0"/>
+<text x="604" y="102" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#b45309" opacity="0.82">高负载</text>
+<text x="704" y="103" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="end" fill="#b45309">6</text>
+<rect x="0" y="131" width="3200" height="1" fill="#e2e8f0"/>
+<rect x="0" y="132" width="184" height="1282" fill="#ffffff"/>
+<text x="24" y="161" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">设计师</text>
+<line x1="184" y1="132" x2="184" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="210" y1="132" x2="210" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="210" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">4</text>
+<text x="210" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/4 · 四</text>
+<line x1="236" y1="132" x2="236" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="262" y1="132" x2="262" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="262" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">5</text>
+<text x="262" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/5 · 五</text>
+<rect x="288" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="288" y1="132" x2="288" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="314" y1="132" x2="314" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="314" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">6</text>
+<text x="314" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/6 · 六</text>
+<rect x="340" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="340" y1="132" x2="340" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="366" y1="132" x2="366" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="366" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">7</text>
+<text x="366" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/7 · 日</text>
+<line x1="392" y1="132" x2="392" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="418" y1="132" x2="418" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="418" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">8</text>
+<text x="418" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/8 · 一</text>
+<line x1="444" y1="132" x2="444" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="470" y1="132" x2="470" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="470" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">9</text>
+<text x="470" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/9 · 二</text>
+<line x1="496" y1="132" x2="496" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="522" y1="132" x2="522" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="522" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">10</text>
+<text x="522" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/10 · 三</text>
+<line x1="548" y1="132" x2="548" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="574" y1="132" x2="574" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="574" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">11</text>
+<text x="574" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/11 · 四</text>
+<line x1="600" y1="132" x2="600" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="626" y1="132" x2="626" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="626" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">12</text>
+<text x="626" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/12 · 五</text>
+<rect x="652" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="652" y1="132" x2="652" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="678" y1="132" x2="678" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="678" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">13</text>
+<text x="678" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/13 · 六</text>
+<rect x="704" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="704" y1="132" x2="704" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="730" y1="132" x2="730" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="730" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">14</text>
+<text x="730" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/14 · 日</text>
+<line x1="756" y1="132" x2="756" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="782" y1="132" x2="782" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="782" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">15</text>
+<text x="782" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/15 · 一</text>
+<line x1="808" y1="132" x2="808" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="834" y1="132" x2="834" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="834" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">16</text>
+<text x="834" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/16 · 二</text>
+<line x1="860" y1="132" x2="860" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="886" y1="132" x2="886" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="886" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">17</text>
+<text x="886" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/17 · 三</text>
+<line x1="912" y1="132" x2="912" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="938" y1="132" x2="938" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="938" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">18</text>
+<text x="938" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/18 · 四</text>
+<line x1="964" y1="132" x2="964" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="990" y1="132" x2="990" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="990" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">19</text>
+<text x="990" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/19 · 五</text>
+<rect x="1016" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="1016" y1="132" x2="1016" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1042" y1="132" x2="1042" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1042" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">20</text>
+<text x="1042" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/20 · 六</text>
+<rect x="1068" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="1068" y1="132" x2="1068" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1094" y1="132" x2="1094" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1094" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">21</text>
+<text x="1094" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/21 · 日</text>
+<line x1="1120" y1="132" x2="1120" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1146" y1="132" x2="1146" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1146" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">22</text>
+<text x="1146" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/22 · 一</text>
+<line x1="1172" y1="132" x2="1172" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1198" y1="132" x2="1198" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1198" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">23</text>
+<text x="1198" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/23 · 二</text>
+<line x1="1224" y1="132" x2="1224" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1250" y1="132" x2="1250" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1250" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">24</text>
+<text x="1250" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/24 · 三</text>
+<line x1="1276" y1="132" x2="1276" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1302" y1="132" x2="1302" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1302" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">25</text>
+<text x="1302" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/25 · 四</text>
+<rect x="1328" y="132" width="52" height="1282" fill="#dbeafe" opacity="0.8"/>
+<line x1="1328" y1="132" x2="1328" y2="1380" stroke="#3b82f6" stroke-width="2"/>
+<line x1="1354" y1="132" x2="1354" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1354" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#1d4ed8">今日</text>
+<text x="1354" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/26 · 五</text>
+<rect x="1380" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="1380" y1="132" x2="1380" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1406" y1="132" x2="1406" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1406" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">27</text>
+<text x="1406" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/27 · 六</text>
+<rect x="1432" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="1432" y1="132" x2="1432" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1458" y1="132" x2="1458" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1458" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">28</text>
+<text x="1458" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/28 · 日</text>
+<line x1="1484" y1="132" x2="1484" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1510" y1="132" x2="1510" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1510" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">29</text>
+<text x="1510" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/29 · 一</text>
+<line x1="1536" y1="132" x2="1536" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1562" y1="132" x2="1562" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1562" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">30</text>
+<text x="1562" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">6/30 · 二</text>
+<line x1="1588" y1="132" x2="1588" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1614" y1="132" x2="1614" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1614" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">1</text>
+<text x="1614" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/1 · 三</text>
+<line x1="1640" y1="132" x2="1640" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1666" y1="132" x2="1666" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1666" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">2</text>
+<text x="1666" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/2 · 四</text>
+<line x1="1692" y1="132" x2="1692" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1718" y1="132" x2="1718" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1718" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">3</text>
+<text x="1718" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/3 · 五</text>
+<rect x="1744" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="1744" y1="132" x2="1744" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1770" y1="132" x2="1770" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1770" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">4</text>
+<text x="1770" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/4 · 六</text>
+<rect x="1796" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="1796" y1="132" x2="1796" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1822" y1="132" x2="1822" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1822" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">5</text>
+<text x="1822" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/5 · 日</text>
+<line x1="1848" y1="132" x2="1848" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1874" y1="132" x2="1874" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1874" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">6</text>
+<text x="1874" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/6 · 一</text>
+<line x1="1900" y1="132" x2="1900" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1926" y1="132" x2="1926" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1926" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">7</text>
+<text x="1926" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/7 · 二</text>
+<line x1="1952" y1="132" x2="1952" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="1978" y1="132" x2="1978" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="1978" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">8</text>
+<text x="1978" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/8 · 三</text>
+<line x1="2004" y1="132" x2="2004" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2030" y1="132" x2="2030" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2030" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">9</text>
+<text x="2030" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/9 · 四</text>
+<line x1="2056" y1="132" x2="2056" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2082" y1="132" x2="2082" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2082" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">10</text>
+<text x="2082" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/10 · 五</text>
+<rect x="2108" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="2108" y1="132" x2="2108" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2134" y1="132" x2="2134" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2134" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">11</text>
+<text x="2134" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/11 · 六</text>
+<rect x="2160" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="2160" y1="132" x2="2160" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2186" y1="132" x2="2186" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2186" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">12</text>
+<text x="2186" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/12 · 日</text>
+<line x1="2212" y1="132" x2="2212" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2238" y1="132" x2="2238" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2238" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">13</text>
+<text x="2238" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/13 · 一</text>
+<line x1="2264" y1="132" x2="2264" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2290" y1="132" x2="2290" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2290" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">14</text>
+<text x="2290" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/14 · 二</text>
+<line x1="2316" y1="132" x2="2316" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2342" y1="132" x2="2342" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2342" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">15</text>
+<text x="2342" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/15 · 三</text>
+<line x1="2368" y1="132" x2="2368" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2394" y1="132" x2="2394" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2394" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">16</text>
+<text x="2394" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/16 · 四</text>
+<line x1="2420" y1="132" x2="2420" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2446" y1="132" x2="2446" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2446" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">17</text>
+<text x="2446" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/17 · 五</text>
+<rect x="2472" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="2472" y1="132" x2="2472" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2498" y1="132" x2="2498" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2498" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">18</text>
+<text x="2498" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/18 · 六</text>
+<rect x="2524" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="2524" y1="132" x2="2524" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2550" y1="132" x2="2550" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2550" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">19</text>
+<text x="2550" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/19 · 日</text>
+<line x1="2576" y1="132" x2="2576" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2602" y1="132" x2="2602" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2602" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">20</text>
+<text x="2602" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/20 · 一</text>
+<line x1="2628" y1="132" x2="2628" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2654" y1="132" x2="2654" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2654" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">21</text>
+<text x="2654" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/21 · 二</text>
+<line x1="2680" y1="132" x2="2680" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2706" y1="132" x2="2706" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2706" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">22</text>
+<text x="2706" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/22 · 三</text>
+<line x1="2732" y1="132" x2="2732" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2758" y1="132" x2="2758" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2758" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">23</text>
+<text x="2758" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/23 · 四</text>
+<line x1="2784" y1="132" x2="2784" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2810" y1="132" x2="2810" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2810" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">24</text>
+<text x="2810" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/24 · 五</text>
+<rect x="2836" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="2836" y1="132" x2="2836" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2862" y1="132" x2="2862" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2862" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">25</text>
+<text x="2862" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/25 · 六</text>
+<rect x="2888" y="132" width="52" height="1282" fill="#f1f5f9" opacity="0.7"/>
+<line x1="2888" y1="132" x2="2888" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2914" y1="132" x2="2914" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2914" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">26</text>
+<text x="2914" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/26 · 日</text>
+<line x1="2940" y1="132" x2="2940" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="2966" y1="132" x2="2966" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="2966" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">27</text>
+<text x="2966" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/27 · 一</text>
+<line x1="2992" y1="132" x2="2992" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="3018" y1="132" x2="3018" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="3018" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">28</text>
+<text x="3018" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/28 · 二</text>
+<line x1="3044" y1="132" x2="3044" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="3070" y1="132" x2="3070" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="3070" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">29</text>
+<text x="3070" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/29 · 三</text>
+<line x1="3096" y1="132" x2="3096" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="3122" y1="132" x2="3122" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="3122" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">30</text>
+<text x="3122" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/30 · 四</text>
+<line x1="3148" y1="132" x2="3148" y2="1380" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="3174" y1="132" x2="3174" y2="1380" stroke="#e2e8f0" opacity="0.5"/>
+<text x="3174" y="152" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#64748b">31</text>
+<text x="3174" y="170" font-family="Inter, Arial, sans-serif" font-size="9" text-anchor="middle" fill="#94a3b8">7/31 · 五</text>
+<line x1="184" y1="132" x2="184" y2="1380" stroke="#cbd5e1"/>
+<rect x="0" y="180" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="258" x2="3200" y2="258" stroke="#e2e8f0"/>
+<circle cx="38" cy="218" r="15" fill="#6366f1"/>
+<text x="38" y="222" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">AL</text>
+<text x="66" y="215" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Admin Li</text>
+<text x="66" y="233" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Admin</text>
+<rect x="1331" y="222" width="254" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1331" y="222" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="1341" y="238" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Review Floral Pack</text>
+<rect x="1695" y="222" width="358" height="24" rx="6" fill="#475569"/>
+<rect x="1695" y="222" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="1705" y="238" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Console Quick Tiles</text>
+<rect x="811" y="192" width="462" height="24" rx="6" fill="#ef4444"/>
+<rect x="811" y="192" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="821" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Supertheme Launch Audit</text>
+<rect x="1591" y="192" width="254" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1591" y="192" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="1601" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Keyboard Emoji States</text>
+<rect x="395" y="192" width="254" height="24" rx="6" fill="#94a3b8"/>
+<rect x="395" y="192" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="405" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Approved Cyber Icons</text>
+<rect x="1279" y="192" width="254" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1279" y="192" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="1289" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Dense Keyboard QA</text>
+<rect x="1851" y="192" width="358" height="24" rx="6" fill="#475569"/>
+<rect x="1851" y="192" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="1861" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Widget Supertheme Polish</text>
+<rect x="2059" y="222" width="358" height="24" rx="6" fill="#3b82f6"/>
+<rect x="2059" y="222" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="2069" y="238" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Icon Export Sprint</text>
+<rect x="2215" y="192" width="358" height="24" rx="6" fill="#3b82f6"/>
+<rect x="2215" y="192" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="2225" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Control Package Fix</text>
+<rect x="2423" y="222" width="358" height="24" rx="6" fill="#475569"/>
+<rect x="2423" y="222" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="2433" y="238" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Keyboard Resource Fill</text>
+<rect x="2579" y="192" width="358" height="24" rx="6" fill="#475569"/>
+<rect x="2579" y="192" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="2589" y="208" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Admin Final Supertheme Review</text>
+<rect x="0" y="258" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="336" x2="3200" y2="336" stroke="#e2e8f0"/>
+<circle cx="38" cy="296" r="15" fill="#6366f1"/>
+<text x="38" y="300" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">RL</text>
+<text x="66" y="293" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Ryan Liu</text>
+<text x="66" y="311" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group A</text>
+<rect x="1331" y="300" width="462" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1331" y="300" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="1341" y="316" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Summer Bloom Collection</text>
+<rect x="1435" y="300" width="722" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1435" y="300" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="1445" y="316" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Aurora Borealis Pack</text>
+<rect x="1331" y="270" width="358" height="24" rx="6" fill="#475569"/>
+<rect x="1331" y="270" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="1341" y="286" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Neon Keyboard Sprint</text>
+<rect x="0" y="336" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="414" x2="3200" y2="414" stroke="#e2e8f0"/>
+<circle cx="38" cy="374" r="15" fill="#6366f1"/>
+<text x="38" y="378" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">MZ</text>
+<text x="66" y="371" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Mia Zhang</text>
+<text x="66" y="389" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group B</text>
+<rect x="395" y="348" width="826" height="24" rx="6" fill="#ef4444"/>
+<rect x="395" y="348" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="405" y="364" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Dark Control Master v2</text>
+<rect x="1331" y="348" width="306" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1331" y="348" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="1341" y="364" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Cute Cat Keyboard</text>
+<rect x="0" y="414" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="492" x2="3200" y2="492" stroke="#e2e8f0"/>
+<circle cx="38" cy="452" r="15" fill="#6366f1"/>
+<text x="38" y="456" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">JP</text>
+<text x="66" y="449" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">James Park</text>
+<text x="66" y="467" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group A</text>
+<rect x="1487" y="426" width="566" height="24" rx="6" fill="#475569"/>
+<rect x="1487" y="426" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="1497" y="442" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Monochrome Studio Pack</text>
+<rect x="2111" y="426" width="306" height="24" rx="6" fill="#3b82f6"/>
+<rect x="2111" y="426" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="2121" y="442" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Holiday Resource Replenish</text>
+<rect x="0" y="492" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="570" x2="3200" y2="570" stroke="#e2e8f0"/>
+<circle cx="38" cy="530" r="15" fill="#6366f1"/>
+<text x="38" y="534" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">SK</text>
+<text x="66" y="527" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Sara Kim</text>
+<text x="66" y="545" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group C</text>
+<rect x="863" y="504" width="306" height="24" rx="6" fill="#94a3b8"/>
+<rect x="863" y="504" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="873" y="520" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Vintage Film Grain Theme</text>
+<rect x="1643" y="504" width="358" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1643" y="504" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="1653" y="520" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">K-Pop Glitter Pack</text>
+<rect x="0" y="570" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="648" x2="3200" y2="648" stroke="#e2e8f0"/>
+<circle cx="38" cy="608" r="15" fill="#6366f1"/>
+<text x="38" y="612" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">TC</text>
+<text x="66" y="605" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Tom Chen</text>
+<text x="66" y="623" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group B</text>
+<rect x="1435" y="582" width="358" height="24" rx="6" fill="#475569"/>
+<rect x="1435" y="582" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="1445" y="598" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Lavender Lock Keyboard</text>
+<rect x="0" y="648" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="726" x2="3200" y2="726" stroke="#e2e8f0"/>
+<circle cx="38" cy="686" r="15" fill="#6366f1"/>
+<text x="38" y="690" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">LW</text>
+<text x="66" y="683" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Lily Wu</text>
+<text x="66" y="701" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group C</text>
+<rect x="1383" y="660" width="462" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1383" y="660" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="1393" y="676" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Ocean Depth Theme</text>
+<rect x="707" y="660" width="358" height="24" rx="6" fill="#ef4444"/>
+<rect x="707" y="660" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="717" y="676" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Gothic Glass Keyboard</text>
+<rect x="0" y="726" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="804" x2="3200" y2="804" stroke="#e2e8f0"/>
+<circle cx="38" cy="764" r="15" fill="#6366f1"/>
+<text x="38" y="768" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">NS</text>
+<text x="66" y="761" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Noah Smith</text>
+<text x="66" y="779" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group D</text>
+<rect x="1591" y="738" width="410" height="24" rx="6" fill="#475569"/>
+<rect x="1591" y="738" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="1601" y="754" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Festival Sticker Control</text>
+<rect x="2007" y="738" width="306" height="24" rx="6" fill="#3b82f6"/>
+<rect x="2007" y="738" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="2017" y="754" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Sports Match Control</text>
+<rect x="0" y="804" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="882" x2="3200" y2="882" stroke="#e2e8f0"/>
+<circle cx="38" cy="842" r="15" fill="#6366f1"/>
+<text x="38" y="846" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">AP</text>
+<text x="66" y="839" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Ava Patel</text>
+<text x="66" y="857" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group E</text>
+<rect x="291" y="816" width="462" height="24" rx="6" fill="#94a3b8"/>
+<rect x="291" y="816" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="301" y="832" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Golden Hour Supertheme</text>
+<rect x="0" y="882" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="960" x2="3200" y2="960" stroke="#e2e8f0"/>
+<circle cx="38" cy="920" r="15" fill="#6366f1"/>
+<text x="38" y="924" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">LM</text>
+<text x="66" y="917" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Leo Martin</text>
+<text x="66" y="935" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group A</text>
+<rect x="2059" y="894" width="566" height="24" rx="6" fill="#475569"/>
+<rect x="2059" y="894" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="2069" y="910" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Retro Pixel Pack</text>
+<rect x="2631" y="894" width="358" height="24" rx="6" fill="#3b82f6"/>
+<rect x="2631" y="894" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="2641" y="910" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Minimal Business Control</text>
+<rect x="0" y="960" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="1038" x2="3200" y2="1038" stroke="#e2e8f0"/>
+<circle cx="38" cy="998" r="15" fill="#6366f1"/>
+<text x="38" y="1002" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">YT</text>
+<text x="66" y="995" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Yuki Tan</text>
+<text x="66" y="1013" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group F</text>
+<rect x="1383" y="972" width="358" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1383" y="972" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="1393" y="988" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Anime Energy Supertheme</text>
+<rect x="0" y="1038" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="1116" x2="3200" y2="1116" stroke="#e2e8f0"/>
+<circle cx="38" cy="1076" r="15" fill="#6366f1"/>
+<text x="38" y="1080" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">NR</text>
+<text x="66" y="1073" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Nina Rossi</text>
+<text x="66" y="1091" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group G</text>
+<rect x="1487" y="1050" width="410" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1487" y="1050" width="4" height="24" rx="2" fill="#8b5cf6" opacity="0.95"/>
+<text x="1497" y="1066" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Nordic Calm Themepack</text>
+<rect x="0" y="1116" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="1194" x2="3200" y2="1194" stroke="#e2e8f0"/>
+<circle cx="38" cy="1154" r="15" fill="#6366f1"/>
+<text x="38" y="1158" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">KM</text>
+<text x="66" y="1151" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Kai Mueller</text>
+<text x="66" y="1169" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group H</text>
+<rect x="1799" y="1128" width="410" height="24" rx="6" fill="#475569"/>
+<rect x="1799" y="1128" width="4" height="24" rx="2" fill="#06b6d4" opacity="0.95"/>
+<text x="1809" y="1144" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Chrome Glass Control</text>
+<rect x="0" y="1194" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="1272" x2="3200" y2="1272" stroke="#e2e8f0"/>
+<circle cx="38" cy="1232" r="15" fill="#6366f1"/>
+<text x="38" y="1236" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">GH</text>
+<text x="66" y="1229" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Grace Hall</text>
+<text x="66" y="1247" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group I</text>
+<rect x="1279" y="1206" width="358" height="24" rx="6" fill="#3b82f6"/>
+<rect x="1279" y="1206" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="1289" y="1222" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Soft Pet Keyboard</text>
+<rect x="0" y="1272" width="3200" height="78" fill="#ffffff"/>
+<line x1="0" y1="1350" x2="3200" y2="1350" stroke="#e2e8f0"/>
+<circle cx="38" cy="1310" r="15" fill="#6366f1"/>
+<text x="38" y="1314" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">HI</text>
+<text x="66" y="1307" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Hana Ito</text>
+<text x="66" y="1325" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group J</text>
+<rect x="499" y="1284" width="410" height="24" rx="6" fill="#94a3b8"/>
+<rect x="499" y="1284" width="4" height="24" rx="2" fill="#f97316" opacity="0.95"/>
+<text x="509" y="1300" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Ocean Widgets Supertheme</text>
+<rect x="0" y="1350" width="3200" height="78" fill="#f8fafc"/>
+<line x1="0" y1="1428" x2="3200" y2="1428" stroke="#e2e8f0"/>
+<circle cx="38" cy="1388" r="15" fill="#6366f1"/>
+<text x="38" y="1392" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">MS</text>
+<text x="66" y="1385" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Mark Stone</text>
+<text x="66" y="1403" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Group G</text>
+<rect x="915" y="1362" width="410" height="24" rx="6" fill="#ef4444"/>
+<rect x="915" y="1362" width="4" height="24" rx="2" fill="#d946ef" opacity="0.95"/>
+<text x="925" y="1378" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Luxury Black Keyboard</text>
+<rect x="24" y="1385" width="11" height="11" rx="2" fill="#3b82f6"/>
+<text x="41" y="1394" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b">进行中</text>
+<rect x="116" y="1385" width="11" height="11" rx="2" fill="#475569"/>
+<text x="133" y="1394" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b">未开始</text>
+<rect x="208" y="1385" width="11" height="11" rx="2" fill="#ef4444"/>
+<text x="225" y="1394" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b">超时</text>
+<rect x="300" y="1385" width="11" height="11" rx="2" fill="#94a3b8"/>
+<text x="317" y="1394" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b">已完成</text>
+</svg>
