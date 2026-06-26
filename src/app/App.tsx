@@ -1206,10 +1206,35 @@ function SelectField<T extends string>({
   className?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [dropdownAlign, setDropdownAlign] = useState<"left" | "right">("left");
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
   const selectedLabel = value || placeholder;
 
+  useEffect(() => {
+    if (!open) return;
+
+    const updateAlignment = () => {
+      const root = rootRef.current;
+      const dropdown = dropdownRef.current;
+      if (!root || !dropdown) return;
+
+      const rootRect = root.getBoundingClientRect();
+      const dropdownRect = dropdown.getBoundingClientRect();
+      const viewportPadding = 8;
+      const overflowsRight = rootRect.left + dropdownRect.width > window.innerWidth - viewportPadding;
+      const overflowsLeftWhenRightAligned = rootRect.right - dropdownRect.width < viewportPadding;
+
+      setDropdownAlign(overflowsRight && !overflowsLeftWhenRightAligned ? "right" : "left");
+    };
+
+    updateAlignment();
+    window.addEventListener("resize", updateAlignment);
+    return () => window.removeEventListener("resize", updateAlignment);
+  }, [open, options.length, selectedLabel]);
+
   return (
-    <div className={`relative z-20 ${className}`} onBlur={(e) => {
+    <div ref={rootRef} className={`relative z-20 ${className}`} onBlur={(e) => {
       if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
     }}>
       <button
@@ -1225,12 +1250,16 @@ function SelectField<T extends string>({
       </button>
 
       {open && (
-        <div className="absolute left-0 top-full mt-1.5 z-50 min-w-full rounded-xl border border-border bg-card shadow-[0_12px_32px_rgba(15,23,42,0.14)] p-1.5">
+        <div
+          ref={dropdownRef}
+          className={`absolute top-full mt-1.5 z-50 min-w-full max-w-[calc(100vw-1rem)] overflow-hidden rounded-xl border border-border bg-card shadow-[0_12px_32px_rgba(15,23,42,0.14)] p-1.5 ${
+            dropdownAlign === "right" ? "right-0" : "left-0"
+          }`}>
           <button
             type="button"
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => { onChange(""); setOpen(false); }}
-            className={`w-full text-left px-2.5 py-2 rounded-lg text-xs transition-colors ${
+            className={`w-full truncate text-left px-2.5 py-2 rounded-lg text-xs transition-colors ${
               value === "" ? "bg-accent text-primary font-semibold" : "text-muted-foreground hover:bg-muted hover:text-foreground"
             }`}>
             {placeholder}
@@ -1241,7 +1270,7 @@ function SelectField<T extends string>({
               type="button"
               onMouseDown={(e) => e.preventDefault()}
               onClick={() => { onChange(option); setOpen(false); }}
-              className={`w-full text-left px-2.5 py-2 rounded-lg text-xs transition-colors whitespace-nowrap ${
+              className={`w-full truncate text-left px-2.5 py-2 rounded-lg text-xs transition-colors whitespace-nowrap ${
                 value === option ? "bg-primary text-primary-foreground font-semibold" : "text-foreground hover:bg-muted"
               }`}>
               {option}
